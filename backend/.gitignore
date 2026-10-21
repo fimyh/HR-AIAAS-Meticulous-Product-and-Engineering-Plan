@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+storage/*
+!storage/.gitkeep
+*.db
+*.db-shm
+*.db-wal
