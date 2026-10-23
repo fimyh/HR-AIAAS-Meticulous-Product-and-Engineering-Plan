@@ -1,0 +1,39 @@
+﻿# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+
+# Build output
+build/
+dist/
+
+# Test and quality output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime storage
+storage/*
+!storage/.gitkeep
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Editors
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
