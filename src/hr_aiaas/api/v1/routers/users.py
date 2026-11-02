@@ -1,45 +1,41 @@
-from fastapi import APIRouter, Query, status
-from pydantic import BaseModel, EmailStr, Field
+from typing import Annotated
 
-from hr_aiaas.api.errors import not_implemented
+from fastapi import APIRouter, Depends, Query, status
+
+from hr_aiaas.api.dependencies import CurrentUser, DatabaseSession, require_csrf, require_permission
+from hr_aiaas.api.schemas.users import PermissionResponse, RoleResponse, UserCreate, UserListResponse, UserResponse, UserUpdate
+from hr_aiaas.repositories import users as repository
+from hr_aiaas.services import users as service
 
 router = APIRouter(prefix="/users", tags=["users and access"])
+UsersRead = Annotated[CurrentUser, Depends(require_permission("users.read"))]
+UsersWrite = Annotated[CurrentUser, Depends(require_permission("users.write"))]
 
-class UserCreate(BaseModel):
-    email: EmailStr
-    full_name: str = Field(min_length=1, max_length=200)
-    password: str = Field(min_length=12, max_length=256)
-    role_ids: list[int] = []
+@router.get("", response_model=UserListResponse)
+async def list_users(current: UsersRead, db: DatabaseSession, limit: int = Query(50, ge=1, le=100), offset: int = Query(0, ge=0)) -> UserListResponse:
+    del current
+    return await service.list_users(db, limit, offset)
 
-class UserUpdate(BaseModel):
-    full_name: str | None = Field(default=None, min_length=1, max_length=200)
-    is_active: bool | None = None
-    role_ids: list[int] | None = None
+@router.post("", response_model=UserResponse, status_code=status.HTTP_201_CREATED, dependencies=[Depends(require_csrf)])
+async def create_user(payload: UserCreate, current: UsersWrite, db: DatabaseSession) -> UserResponse:
+    return await service.create_user(db, payload, current.user.id)
 
-@router.get("")
-async def list_users(limit: int = Query(50, ge=1, le=100), offset: int = Query(0, ge=0)) -> dict[str, object]:
-    del limit, offset
-    not_implemented("List users")
+# Static access routes must be registered before /{public_id}.
+@router.get("/access/roles", response_model=list[RoleResponse])
+async def list_roles(current: UsersRead, db: DatabaseSession) -> list[RoleResponse]:
+    del current
+    return [RoleResponse.model_validate(item) for item in await repository.list_roles(db)]
 
-@router.post("", status_code=status.HTTP_201_CREATED)
-async def create_user(payload: UserCreate) -> dict[str, object]:
-    del payload
-    not_implemented("Create user")
+@router.get("/access/permissions", response_model=list[PermissionResponse])
+async def list_permissions(current: UsersRead, db: DatabaseSession) -> list[PermissionResponse]:
+    del current
+    return [PermissionResponse.model_validate(item) for item in await repository.list_permissions(db)]
 
-@router.get("/{public_id}")
-async def get_user(public_id: str) -> dict[str, object]:
-    del public_id
-    not_implemented("Get user")
+@router.get("/{public_id}", response_model=UserResponse)
+async def get_user(public_id: str, current: UsersRead, db: DatabaseSession) -> UserResponse:
+    del current
+    return await service.get_user(db, public_id)
 
-@router.patch("/{public_id}")
-async def update_user(public_id: str, payload: UserUpdate) -> dict[str, object]:
-    del public_id, payload
-    not_implemented("Update user")
-
-@router.get("/access/roles")
-async def list_roles() -> list[dict[str, object]]:
-    not_implemented("List roles")
-
-@router.get("/access/permissions")
-async def list_permissions() -> list[dict[str, object]]:
-    not_implemented("List permissions")
+@router.patch("/{public_id}", response_model=UserResponse, dependencies=[Depends(require_csrf)])
+async def update_user(public_id: str, payload: UserUpdate, current: UsersWrite, db: DatabaseSession) -> UserResponse:
+    return await service.update_user(db, public_id, payload, current.user.id)
