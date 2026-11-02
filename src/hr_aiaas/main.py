@@ -1,11 +1,11 @@
 ﻿from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 
-from hr_aiaas.api.health import router as health_router
-from hr_aiaas.api.router import api_router
+from hr_aiaas.api.v1 import api_v1_router
 from hr_aiaas.config import get_settings
+from hr_aiaas.db.health import check_database_health
 from hr_aiaas.db.session import dispose_engine
 
 
@@ -68,7 +68,7 @@ def create_application() -> FastAPI:
 
     @application.get(
         "/",
-        tags=["System"],
+        tags=["system"],
         summary="Application information",
     )
     async def root():
@@ -81,13 +81,58 @@ def create_application() -> FastAPI:
                 "version": "v1",
                 "baseUrl": "/api/v1",
                 "documentation": "/docs",
-                "health": "/health/live",
+                "liveness": "/health/live",
                 "readiness": "/health/ready",
             },
         }
 
-    application.include_router(health_router)
-    application.include_router(api_router)
+    @application.get(
+        "/health/live",
+        tags=["system"],
+        summary="Process liveness",
+    )
+    async def liveness():
+        return {
+            "status": "ok",
+        }
+
+    @application.get(
+        "/health/ready",
+        tags=["system"],
+        summary="Application readiness",
+    )
+    async def readiness():
+        try:
+            database = await check_database_health()
+        except Exception as exception:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Database is not ready.",
+            ) from exception
+
+        database_ready = (
+            database.foreign_keys
+            and database.journal_mode == "wal"
+            and database.busy_timeout_ms >= 5000
+        )
+
+        if not database_ready:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Database configuration is not ready.",
+            )
+
+        return {
+            "status": "ready",
+            "database": {
+                "status": database.status,
+                "foreignKeys": database.foreign_keys,
+                "journalMode": database.journal_mode,
+                "busyTimeoutMs": database.busy_timeout_ms,
+            },
+        }
+
+    application.include_router(api_v1_router)
 
     return application
 
