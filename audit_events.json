@@ -1,0 +1,15 @@
+[
+    {
+        "action": "candidate.read",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "details_json": "{\"source\": \"seed.synthetic.v1\"}",
+        "id": 9001,
+        "ip_address": "127.0.0.1",
+        "outcome": "success",
+        "reason": "Synthetic audit event",
+        "request_id": "seed-request",
+        "resource_public_id": "00000000-0000-0000-0000-000000002329",
+        "resource_type": "candidate",
+        "user_id": 9002
+    }
+]

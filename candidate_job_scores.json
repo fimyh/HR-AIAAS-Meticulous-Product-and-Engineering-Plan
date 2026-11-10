@@ -1,0 +1,29 @@
+[
+    {
+        "candidate_id": 9001,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "explanation": "Synthetic deterministic score.",
+        "id": 9001,
+        "match_label": "strong documented match",
+        "match_run_id": 9001,
+        "total_score": 88.0
+    },
+    {
+        "candidate_id": 9002,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "explanation": "Synthetic deterministic score.",
+        "id": 9002,
+        "match_label": "strong documented match",
+        "match_run_id": 9001,
+        "total_score": 84.0
+    },
+    {
+        "candidate_id": 9003,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "explanation": "Synthetic deterministic score.",
+        "id": 9003,
+        "match_label": "documented match",
+        "match_run_id": 9001,
+        "total_score": 76.0
+    }
+]

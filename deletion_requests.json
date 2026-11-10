@@ -1,0 +1,13 @@
+[
+    {
+        "approved_at": null,
+        "approved_by_id": null,
+        "candidate_id": 9003,
+        "completed_at": null,
+        "id": 9001,
+        "reason": "Synthetic deletion workflow test",
+        "requested_at": "2026-11-10T15:19:18+00:00",
+        "requested_by_id": 9002,
+        "status": "pending"
+    }
+]

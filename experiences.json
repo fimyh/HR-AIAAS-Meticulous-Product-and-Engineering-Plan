@@ -1,0 +1,38 @@
+[
+    {
+        "candidate_id": 9001,
+        "company_name": "Example Analytics",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic experience.",
+        "end_date": null,
+        "id": 9001,
+        "is_current": 1,
+        "job_title": "Data Engineer",
+        "start_date": "2022-01-01",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    },
+    {
+        "candidate_id": 9002,
+        "company_name": "Example Systems",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic experience.",
+        "end_date": null,
+        "id": 9002,
+        "is_current": 1,
+        "job_title": "Backend Developer",
+        "start_date": "2021-06-01",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    },
+    {
+        "candidate_id": 9003,
+        "company_name": "Example AI Lab",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic experience.",
+        "end_date": null,
+        "id": 9003,
+        "is_current": 1,
+        "job_title": "AI Engineer",
+        "start_date": "2023-01-01",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    }
+]

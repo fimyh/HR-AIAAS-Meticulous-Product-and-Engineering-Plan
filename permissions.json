@@ -1,0 +1,66 @@
+[
+    {
+        "action": "read",
+        "code": "users.read",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission users.read",
+        "id": 9001,
+        "resource": "users"
+    },
+    {
+        "action": "write",
+        "code": "users.write",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission users.write",
+        "id": 9002,
+        "resource": "users"
+    },
+    {
+        "action": "read",
+        "code": "candidate.read",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission candidate.read",
+        "id": 9003,
+        "resource": "candidate"
+    },
+    {
+        "action": "write",
+        "code": "candidate.write",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission candidate.write",
+        "id": 9004,
+        "resource": "candidate"
+    },
+    {
+        "action": "upload",
+        "code": "documents.upload",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission documents.upload",
+        "id": 9005,
+        "resource": "documents"
+    },
+    {
+        "action": "manage",
+        "code": "jobs.manage",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission jobs.manage",
+        "id": 9006,
+        "resource": "jobs"
+    },
+    {
+        "action": "run",
+        "code": "matches.run",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission matches.run",
+        "id": 9007,
+        "resource": "matches"
+    },
+    {
+        "action": "read",
+        "code": "audit.read",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "description": "Synthetic permission audit.read",
+        "id": 9008,
+        "resource": "audit"
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "candidate_id": 9001,
+        "deleted_at": null,
+        "document_type": "cv",
+        "id": 9001,
+        "mime_type": "application/pdf",
+        "original_filename": "synthetic_alex_cv.pdf",
+        "public_id": "00000000-0000-0000-0000-000000004a39",
+        "sha256": "bb1ed12d182f7bc4507452c5c946792ad9b78fc6a70b08a18500a239e7cce2b5",
+        "size_bytes": 2048,
+        "status": "processed",
+        "uploaded_at": "2026-11-10T15:19:18+00:00",
+        "uploaded_by_id": 9002
+    }
+]

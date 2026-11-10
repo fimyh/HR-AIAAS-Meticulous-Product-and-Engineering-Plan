@@ -1,0 +1,35 @@
+[
+    {
+        "candidate_id": 9001,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "degree_name": "BSc",
+        "description": "Synthetic education.",
+        "end_date": "2021-06-01",
+        "field_of_study": "Computer Science",
+        "id": 9001,
+        "institution_name": "Example University",
+        "start_date": "2017-09-01"
+    },
+    {
+        "candidate_id": 9002,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "degree_name": "BSc",
+        "description": "Synthetic education.",
+        "end_date": "2021-06-01",
+        "field_of_study": "Software Engineering",
+        "id": 9002,
+        "institution_name": "Example University",
+        "start_date": "2017-09-01"
+    },
+    {
+        "candidate_id": 9003,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "degree_name": "BSc",
+        "description": "Synthetic education.",
+        "end_date": "2021-06-01",
+        "field_of_study": "Data Science",
+        "id": 9003,
+        "institution_name": "Example University",
+        "start_date": "2017-09-01"
+    }
+]

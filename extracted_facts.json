@@ -1,0 +1,15 @@
+[
+    {
+        "candidate_id": 9001,
+        "confidence": 0.95,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "extraction_run_id": 9001,
+        "field_path": "skills[0].name",
+        "id": 9001,
+        "review_status": "confirmed",
+        "reviewed_at": "2026-11-10T15:19:18+00:00",
+        "reviewed_by_id": 9002,
+        "value_json": "\"Python\"",
+        "value_type": "string"
+    }
+]

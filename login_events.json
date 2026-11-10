@@ -1,0 +1,11 @@
+[
+    {
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "email_attempted": "recruiter@example.test",
+        "id": 9001,
+        "ip_address": "127.0.0.1",
+        "result": "success",
+        "user_agent": "Synthetic Seed Client",
+        "user_id": 9002
+    }
+]

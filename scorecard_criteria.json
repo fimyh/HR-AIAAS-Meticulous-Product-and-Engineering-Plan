@@ -1,0 +1,22 @@
+[
+    {
+        "configuration_json": "{}",
+        "criterion_code": "required_skills",
+        "description": "Documented required skills",
+        "display_order": 1,
+        "id": 9001,
+        "name": "Required skills",
+        "scorecard_id": 9001,
+        "weight": 60.0
+    },
+    {
+        "configuration_json": "{}",
+        "criterion_code": "experience",
+        "description": "Documented experience",
+        "display_order": 2,
+        "id": 9002,
+        "name": "Relevant experience",
+        "scorecard_id": 9001,
+        "weight": 40.0
+    }
+]

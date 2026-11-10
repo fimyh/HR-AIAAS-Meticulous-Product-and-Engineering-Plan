@@ -1,0 +1,20 @@
+[
+    {
+        "awarded_points": 55.0,
+        "candidate_job_score_id": 9001,
+        "criterion_id": 9001,
+        "evidence_json": "{\"skill_ids\": [9001, 9002]}",
+        "explanation": "Python and SQL evidence",
+        "id": 9001,
+        "maximum_points": 60.0
+    },
+    {
+        "awarded_points": 33.0,
+        "candidate_job_score_id": 9001,
+        "criterion_id": 9002,
+        "evidence_json": "{\"experience_ids\": [9001]}",
+        "explanation": "Relevant experience",
+        "id": 9002,
+        "maximum_points": 40.0
+    }
+]

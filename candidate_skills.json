@@ -1,0 +1,47 @@
+[
+    {
+        "candidate_id": 9001,
+        "confidence": 0.95,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "evidence_summary": "Synthetic evidence",
+        "last_used_at": "2026-11-10T15:19:18+00:00",
+        "proficiency_level": "advanced",
+        "skill_id": 9001
+    },
+    {
+        "candidate_id": 9001,
+        "confidence": 0.9,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "evidence_summary": "Synthetic evidence",
+        "last_used_at": "2026-11-10T15:19:18+00:00",
+        "proficiency_level": "advanced",
+        "skill_id": 9002
+    },
+    {
+        "candidate_id": 9002,
+        "confidence": 0.9,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "evidence_summary": "Synthetic evidence",
+        "last_used_at": "2026-11-10T15:19:18+00:00",
+        "proficiency_level": "advanced",
+        "skill_id": 9001
+    },
+    {
+        "candidate_id": 9002,
+        "confidence": 0.92,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "evidence_summary": "Synthetic evidence",
+        "last_used_at": "2026-11-10T15:19:18+00:00",
+        "proficiency_level": "advanced",
+        "skill_id": 9003
+    },
+    {
+        "candidate_id": 9003,
+        "confidence": 0.94,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "evidence_summary": "Synthetic evidence",
+        "last_used_at": "2026-11-10T15:19:18+00:00",
+        "proficiency_level": "advanced",
+        "skill_id": 9004
+    }
+]

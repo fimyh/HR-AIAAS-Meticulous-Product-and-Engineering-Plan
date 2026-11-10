@@ -1,0 +1,15 @@
+[
+    {
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "created_by_id": 9002,
+        "department": "Engineering",
+        "description": "Synthetic test job.",
+        "employment_type": "Full-time",
+        "id": 9001,
+        "location": "Remote",
+        "public_id": "00000000-0000-0000-0000-000000009859",
+        "status": "open",
+        "title": "Senior Backend Engineer",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    }
+]

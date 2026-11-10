@@ -1,0 +1,13 @@
+[
+    {
+        "completed_at": "2026-11-10T15:19:18+00:00",
+        "document_version_id": 9001,
+        "id": 9001,
+        "model_id": 9001,
+        "overall_confidence": 0.95,
+        "prompt_version_id": 9001,
+        "schema_version": "1.0",
+        "started_at": "2026-11-10T15:19:18+00:00",
+        "status": "COMPLETED"
+    }
+]

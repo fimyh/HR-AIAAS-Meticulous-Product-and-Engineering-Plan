@@ -1,0 +1,18 @@
+[
+    {
+        "completed_at": "2026-11-10T15:19:18+00:00",
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "duration_ms": 950,
+        "id": 9001,
+        "input_tokens": 300,
+        "model_id": 9001,
+        "output_tokens": 80,
+        "prompt_version_id": 9001,
+        "resource_public_id": "00000000-0000-0000-0000-000000004a39",
+        "resource_type": "document",
+        "run_type": "cv_extraction",
+        "safe_error_code": null,
+        "status": "completed",
+        "user_id": 9002
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "archived_at": null,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "created_by_id": 9002,
+        "current_title": "Data Engineer",
+        "full_name": "Alex Morgan",
+        "id": 9001,
+        "is_archived": 0,
+        "professional_summary": "Synthetic candidate profile for local testing only.",
+        "profile_status": "reviewed",
+        "public_id": "00000000-0000-0000-0000-000000002329",
+        "source_language": "en",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    },
+    {
+        "archived_at": null,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "created_by_id": 9002,
+        "current_title": "Backend Developer",
+        "full_name": "Sam Rivera",
+        "id": 9002,
+        "is_archived": 0,
+        "professional_summary": "Synthetic candidate profile for local testing only.",
+        "profile_status": "reviewed",
+        "public_id": "00000000-0000-0000-0000-00000000232a",
+        "source_language": "en",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    },
+    {
+        "archived_at": null,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "created_by_id": 9002,
+        "current_title": "AI Engineer",
+        "full_name": "Jordan Lee",
+        "id": 9003,
+        "is_archived": 0,
+        "professional_summary": "Synthetic candidate profile for local testing only.",
+        "profile_status": "needs_review",
+        "public_id": "00000000-0000-0000-0000-00000000232b",
+        "source_language": "en",
+        "updated_at": "2026-11-10T15:19:18+00:00"
+    }
+]

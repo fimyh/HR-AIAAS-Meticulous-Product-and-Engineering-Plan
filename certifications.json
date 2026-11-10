@@ -1,0 +1,13 @@
+[
+    {
+        "candidate_id": 9001,
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "credential_id": "SYN-9001",
+        "credential_url": null,
+        "expires_at": null,
+        "id": 9001,
+        "issued_at": "2024-01-01",
+        "issuer": "Example Institute",
+        "name": "Synthetic Data Certification"
+    }
+]

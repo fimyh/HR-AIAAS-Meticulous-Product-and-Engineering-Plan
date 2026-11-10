@@ -1,0 +1,11 @@
+[
+    {
+        "created_at": "2026-11-10T15:19:18+00:00",
+        "document_id": 9001,
+        "id": 9001,
+        "sha256": "bb1ed12d182f7bc4507452c5c946792ad9b78fc6a70b08a18500a239e7cce2b5",
+        "size_bytes": 2048,
+        "storage_key": "documents/synthetic/alex-v1.pdf",
+        "version_number": 1
+    }
+]
